@@ -1,0 +1,115 @@
+body{
+    margin: 0;
+    min-height: 100vh;
+    background-image: url(img1/fundo.jpg);
+    background-repeat: no-repeat; 
+    background-position:top;
+    background-size: cover
+}
+
+.logo{
+    position: absolute;
+    width: 300px; 
+    height: 350px; 
+    left: 60px;
+    top: -35px;
+    color: white;
+}
+
+.botao{
+    position: absolute;
+    right: 100px;
+    top: 105px;
+    width: 300px; 
+    height: 90px;
+    border-radius: 50px;
+}
+
+.botao{
+    font-size: 40px; 
+    color:#ffffff;
+    background-color: #00437e;
+     border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border-radius: 50px;
+        font-family: Arial, Helvetica, sans-serif;
+
+    
+}
+.texto{
+    font-size: 100px; 
+    color:#00437e;
+    text-align: center;
+    margin-top: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.texto2{
+    font-size: 100px; 
+    color:#00437e;
+    text-align: center;
+    margin-top: -90px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.login{
+    padding: 10px;
+    font-size: 50px;
+    position: absolute;
+    right: 680px;
+    top: 390px;
+    width: 500px; 
+    height: 50px;
+     border: none;
+    border:  3px solid #00437e;
+    padding: 10px 20px;
+    border-radius: 50px;
+        font-family: Arial, Helvetica, sans-serif;
+
+    
+}
+
+.senha{
+    padding: 10px;
+    font-size: 50px;
+    position: absolute;
+    right: 680px;
+    top: 570px;
+    width: 500px; 
+    height: 50px;
+     border: none;
+    border:  3px solid #00437e;
+    padding: 10px 20px;
+    border-radius: 50px;
+        font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+.botao2{
+position: absolute;
+right: 810px;
+top: 705px;
+width: 300px; 
+height: 90px;
+border: 1px;
+    border-color: #00437e;
+    border-radius: 50px;
+        font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.botao2{
+    font-size: 60px; 
+    color:#ffffff;
+    background-color: #00437e;
+    border: none;
+    border:  5px solid #00437e;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border-radius: 50px;
+        font-family: Arial, Helvetica, sans-serif;
+
+}

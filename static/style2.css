@@ -1,0 +1,71 @@
+body{
+    margin: 0;
+    min-height: 100vh;
+    background-image: url(img/tela2.png);
+    background-repeat: no-repeat; 
+    background-position:top;
+   
+    background-size: cover
+    
+}
+
+.voltar{
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    padding: 8px 15px;
+    border: 1px solid #888;
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+}
+
+.form-box{
+    background: white;
+    padding: 25px;
+    width: 300px;
+    margin: 40px auto;
+    border-radius: 8px;
+}
+
+input{
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+button{
+    padding: 10px 20px;
+}
+
+.voltar{
+position: absolute;
+width: 200px; 
+height: 50px;
+border: 1px;
+    border-color: #00437e;
+    border-radius: 50px;
+        font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.voltar{
+    font-size: 30px; 
+    color:#ffffff;
+    background-color: #00437e;
+    border: none;
+    border:  5px solid #00437e;
+    padding: 5px 10px;
+    border-radius: 50px;
+        font-family: Arial, Helvetica, sans-serif;
+
+}
+h1{
+  background-color: white;
+  padding: 10px 20px;
+  display: inline-block;
+  font-size: 32px;
+  font-weight: bold;
+  margin-left: 750px;
+  border-radius: 50px;
+}
