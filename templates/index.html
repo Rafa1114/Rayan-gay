@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src="../static/script2.js"></script>
+    <link rel="stylesheet" href="../static/codigos/style.css">
+
+</head>
+<body>
+    <img src="../static/codigos/img1/logo.png" class="logo">
+    <h1 class="texto">Sistema de </h1>
+    <h1 class="texto2">almoxarifado</h1>
+    <input type="text" placeholder="Login" class="login" id="login">
+    <button type="button" class="botao2" onclick="verificarLogin()">
+    Entrar
+</button>
+    <div class="campo-senha">
+    <input type="password" placeholder="Senha" class="senha" id="senha">
+        <button style="position: absolute; left: 1150px; top: 600px;" onclick="toggleSenha()">👁</button>
+    </div>
+ 
+    <a href= "{{url_for('home')}}" >
+        <button class="botao"> Cadastre-se</button>
+    </a>
+
+
+    <script>
+function toggleSenha() {
+    var senhaInput = document.getElementById("senha");
+
+    if (senhaInput.type === "password") {
+        senhaInput.type = "text";
+    } else {
+        senhaInput.type = "password";
+    }
+}
+
+        
+</script>
+<script src="/templates/script.js"></script>
+</body>
+</html>

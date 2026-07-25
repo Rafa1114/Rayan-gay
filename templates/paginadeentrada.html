@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saida</title>
+        <link rel="stylesheet" href="../static/script.js ">
+</head>
+<body>
+<style>
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("fundo.jpg");
+    background-size: cover;
+    background-position: center;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    
+}
+
+/* quadrado branco */
+.caixa{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    width:300px;
+    text-align:center;
+    
+}
+
+/* caixas de texto */
+input{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+    border-radius:10px;
+    border:1px solid #ccc;
+}
+
+button{
+    margin-top:10px;
+    padding:10px;
+    width:100%;
+    border:none;
+    border-radius:10px;
+    background:#184a7a;
+    color:white;
+    font-size:16px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="caixa">
+
+<h2>Solicitar Entrada</h2>
+
+<input type="text" placeholder="Produto">
+
+<input type="text" placeholder="Quantidade">
+
+<button onclick="mostrarAlerta()">Confirmar</button>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+function mostrarAlerta(){
+    Swal.fire({
+        title: "Solicitação concluída!",
+        icon: "success"
+    });
+}
+</script>
+</div>
+
+    </style>
+    <link rel="stylesheet" href="../static/style2.css">
+ 
+</body>
+<a href="menu" ><button class="voltar" style="top: 3%; left:1%;">Voltar</button></a>
+
+</div>
+
+</html>
