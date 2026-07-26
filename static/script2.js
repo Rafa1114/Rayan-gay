@@ -70,11 +70,11 @@ function verificarLogin() {
     const senhaDigitada = document.getElementById("senha").value;
 
     if (
-        (usuarioDigitado === "vinicius" && senhaDigitada === "1234") ||
+        (usuarioDigitado === "user" && senhaDigitada === "1234") ||
         (usuarioDigitado === "admin" && senhaDigitada === "4321")
     ) {
         alert("Login realizado com sucesso!");
-        window.location.href = "/usuarios";
+        window.location.href = "/menu";
     } else {
         alert("Usuário ou senha incorretos!");
     }
