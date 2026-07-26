@@ -1,8 +1,7 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 import mysql.connector
 
 app = Flask(__name__)
-
 
 def conectar():
     return mysql.connector.connect(
@@ -55,6 +54,8 @@ def paginadesaida():
 @app.route("/paginadonovoitem")
 def paginadonovoitem():
     return render_template("paginadonovoitem.html")
+
+
 @app.route("/adicionaritem", methods=["POST"])
 def adicionaritem():
 
@@ -62,26 +63,54 @@ def adicionaritem():
     descricao = request.form["descricao"]
     qtd = request.form["qtd"]
     preco = request.form["preco"]
-    imagem = request.form["imagem"]
 
     banco = conectar()
     cursor = banco.cursor()
 
-    sql = """
-    INSERT INTO objetos (nome, descricao, qtd, preco, imagem)
-    VALUES (%s, %s, %s, %s, %s)
-    """
-
-    cursor.execute(sql, (nome, descricao, qtd, preco, imagem))
+    cursor.execute(
+        "INSERT INTO objetos (nome, descricao, qtd, preco) VALUES (%s, %s, %s, %s)",
+        (nome, descricao, qtd, preco)
+    )
 
     banco.commit()
 
     cursor.close()
     banco.close()
 
-    from flask import redirect, url_for, flash
-    flash("Item adicionado com sucesso!")
-return redirect(url_for("paginadonovoitem"))
+    return redirect("/paginadonovoitem")
+
+@app.route("/excluir_todos")
+def excluir_todos():
+
+    banco = conectar()
+    cursor = banco.cursor()
+
+    cursor.execute("DELETE FROM objetos")
+
+    banco.commit()
+
+    cursor.close()
+    banco.close()
+
+    return redirect("/paginaconsulta")
+
+@app.route("/excluir/<id>")
+def excluir(id):
+
+    banco = conectar()
+    cursor = banco.cursor()
+
+    cursor.execute(
+        "DELETE FROM objetos WHERE id = %s",
+        (id,)
+    )
+
+    banco.commit()
+
+    cursor.close()
+    banco.close()
+
+    return redirect("/paginaconsulta")
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', debug=True)
+    app.run(host="0.0.0.0", debug=True)
