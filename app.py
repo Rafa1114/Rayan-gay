@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import mysql.connector
 
 app = Flask(__name__)
@@ -55,6 +55,33 @@ def paginadesaida():
 @app.route("/paginadonovoitem")
 def paginadonovoitem():
     return render_template("paginadonovoitem.html")
+@app.route("/adicionaritem", methods=["POST"])
+def adicionaritem():
+
+    nome = request.form["nome"]
+    descricao = request.form["descricao"]
+    qtd = request.form["qtd"]
+    preco = request.form["preco"]
+    imagem = request.form["imagem"]
+
+    banco = conectar()
+    cursor = banco.cursor()
+
+    sql = """
+    INSERT INTO objetos (nome, descricao, qtd, preco, imagem)
+    VALUES (%s, %s, %s, %s, %s)
+    """
+
+    cursor.execute(sql, (nome, descricao, qtd, preco, imagem))
+
+    banco.commit()
+
+    cursor.close()
+    banco.close()
+
+    from flask import redirect, url_for, flash
+    flash("Item adicionado com sucesso!")
+return redirect(url_for("paginadonovoitem"))
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)

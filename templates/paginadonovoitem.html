@@ -30,7 +30,7 @@
             padding: 10px;
         }
     </style>
-        <link rel="stylesheet" href="../static/script.js ">
+        <script src="../static/script2.js"></script>
     <link rel="stylesheet" href="../static/style.css">
 </head>
 <body>
@@ -38,19 +38,32 @@
 <a href="menu" ><button class="voltar">Voltar</button></a>
 <br><br>
 <div class="titulo">
- <h1>Consulta de Estoque</h1>
+ <h1>Adicionar Item</h1>
 </div>
 
-<input type="text" id="nomeItem" placeholder="Nome do item">
+<form action="/adicionaritem" method="POST">
 
-<br><br>
+    <input type="text" name="nome" placeholder="Nome do item">
 
-<input type="number" id="quantidadeItem" placeholder="Quantidade">
+    <br><br>
 
-<br><br>
+    <input type="text" name="descricao" placeholder="Descrição">
 
-<button onclick="adicionarItem()">Adicionar</button>
+    <br><br>
 
+    <input type="number" name="qtd" placeholder="Quantidade">
+
+    <br><br>
+
+    <input type="number" step="0.01" name="preco" placeholder="Preço">
+
+    <br><br>
+
+    <button type="submit">
+        Adicionar
+    </button>
+
+</form>
 <script src="../static/script2.js"></script>
 
 </body>
