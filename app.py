@@ -7,7 +7,7 @@ def conectar():
     return mysql.connector.connect(
         host="localhost",
         user="root",
-        password="Amora_321",
+        password="",
         database="trabalho"
     )
 
@@ -111,6 +111,22 @@ def excluir(id):
     banco.close()
 
     return redirect("/paginaconsulta")
+
+# historico
+@app.route("/historico")
+def historico():
+
+    banco = conectar()
+    cursor = banco.cursor()
+
+    cursor.execute("SELECT * FROM historico")
+
+    historico = cursor.fetchall()
+
+    cursor.close()
+    banco.close()
+
+    return render_template("historico.html", historico=historico)
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True)

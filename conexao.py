@@ -3,10 +3,11 @@ import mysql.connector
 banco = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="Amora_321",
+    password="",
     database="trabalho"
 )
 
 cursor = banco.cursor()
 
 print("Conectado ao MySQL!")
+

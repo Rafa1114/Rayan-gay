@@ -69,3 +69,15 @@ h1{
   margin-left: 750px;
   border-radius: 50px;
 }
+
+.consulta5{
+    width: 450px;
+    height: 90px;
+    background-color: #00437e;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 30px;
+    display: block;
+    margin: 40px auto;
+}
