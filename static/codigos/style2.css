@@ -1,5 +1,5 @@
 body{
-    background-image: url(img1/fundo3.jpg) ;
+    background-image: url(../img/Historico.png) ;
      margin: 0;
     min-height: 100vh;
     height: 100vh;
@@ -11,7 +11,7 @@ body{
 .consulta1{
     position: absolute;
 right: 37%;
-top: 20%;
+top: 16%;
 width: 500px; 
 height: 90px;
 border: 3px;
@@ -37,7 +37,7 @@ font-size: 40px;
 .consulta2{
     position: absolute;
 right: 37%;
-top: 325px;
+top: 260px;
 width: 500px; 
 height: 90px;
 border: 3px;
@@ -59,7 +59,7 @@ font-size: 40px;
 .consulta3{
     position: absolute;
 right: 37%;
-top: 465px;
+top: 400px;
 width: 500px; 
 height: 90px;
 border: 3px;
@@ -83,7 +83,7 @@ font-size: 40px;
 .consulta4{
     position: absolute;
 right: 37%;
-top: 605px;
+top: 540px;
 width: 500px; 
 height: 90px;
 border: 3px;
@@ -105,7 +105,7 @@ font-size: 40px;
 .voltar{
     position: absolute;
     left: 4%;
-    top: 8%;
+    top: 2%;
     background-color: #00437e;
     border: none;
     border:  5px solid #00437e;
@@ -117,4 +117,21 @@ font-size: 40px;
     color:#ffffff;
             border-radius: 50px;
 
+}
+
+.consulta5{
+    position: absolute;
+    width: 450px;
+    height: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 660px;
+
+    background-color: #00437e;
+    color: white;
+    border: none;
+    border-radius: 50px;
+
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
 }

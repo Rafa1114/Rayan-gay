@@ -72,6 +72,11 @@ def adicionaritem():
         (nome, descricao, qtd, preco)
     )
 
+    cursor.execute(
+        "INSERT INTO historico (nome, tipo, quantidade) VALUES (%s, %s, %s)",
+        (nome, "Entrada", qtd)
+    )
+
     banco.commit()
 
     cursor.close()
@@ -100,10 +105,15 @@ def excluir(id):
     banco = conectar()
     cursor = banco.cursor()
 
+    cursor.execute("SELECT nome, qtd FROM objetos WHERE id = %s", (id,))
+    objeto = cursor.fetchone()
+
     cursor.execute(
-        "DELETE FROM objetos WHERE id = %s",
-        (id,)
+        "INSERT INTO historico (nome, tipo, quantidade) VALUES (%s, %s, %s)",
+        (objeto[0], "Saída", objeto[1])
     )
+
+    cursor.execute("DELETE FROM objetos WHERE id = %s", (id,))
 
     banco.commit()
 
