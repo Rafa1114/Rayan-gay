@@ -2,13 +2,14 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Histórico</title>
+    <title class="titulo">Histórico</title>
 
     <style>
 
         body{
             font-family: Arial, Helvetica, sans-serif;
-            background: #f4f4f4;
+            background-image: url(../static/img/tela2.png);
+            background-size: cover;
             text-align: center;
         }
 
@@ -29,6 +30,45 @@
             color: white;
         }
 
+        .voltar{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+    width: 150px;
+    height: 50px;
+
+    background-color: #00437e;
+    color: white;
+
+    border: none;
+    border-radius: 50px;
+
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    cursor: pointer;
+}
+
+.apagar{
+       position: absolute;
+    top: 90px;
+    left: 20px;
+
+    width: 200px;
+    height: 50px;
+
+    background-color: #00437e;
+    color: white;
+
+    border: none;
+    border-radius: 50px;
+
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    cursor: pointer;
+}
     </style>
 
 </head>
@@ -36,7 +76,12 @@
 <body>
 
 <a href="/menu">
-    <button>Voltar</button>
+    <button class="voltar">Voltar</button>
+</a>
+
+<a href="/apagarhistorico">
+    <button class="apagar">Apagar Histórico</button>
+    
 </a>
 
 <h1>Histórico de Movimentações</h1>

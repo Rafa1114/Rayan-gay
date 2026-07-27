@@ -138,5 +138,20 @@ def historico():
 
     return render_template("historico.html", historico=historico)
 
+@app.route("/apagarhistorico")
+def apagarhistorico():
+
+    banco = conectar()
+    cursor = banco.cursor()
+
+    cursor.execute("DELETE FROM historico")
+
+    banco.commit()
+
+    cursor.close()
+    banco.close()
+
+    return redirect("/historico")
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True)
